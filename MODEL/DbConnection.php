@@ -23,10 +23,10 @@ class DbConnection
 
     public function __construct()
     {
-        $this->host = 'mysql-share-pics.alwaysdata.net';
-        $this->dbName = 'share-pics_alex';
-        $this->username = 178436;
-        $this->pass = 'azerty';
+        $this->host = 'mysql-alexissola.alwaysdata.net';
+        $this->dbName = 'alexissola_bd';
+        $this->username = 192834;
+        $this->pass = 'Alexis07?';
     }
 
     public function connection(){

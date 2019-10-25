@@ -20,7 +20,7 @@ class DbUsers
     }
 
     public function loginUsers($username){
-        $query = $this->db->prepare('SELECT * FROM user WHERE login = :username');
+        $query = $this->db->prepare('SELECT * FROM users WHERE login = :username');
 
         $query->execute(array(
             ':username' => $username
@@ -31,7 +31,7 @@ class DbUsers
 
     public function insertUsers($username, $pass, $mail, $name){
 
-        $query = $this->db->prepare("INSERT INTO `user`(`ID`, `login`, `pass`, `mail`, `name`) VALUES (null, :username, :pass , :mail, :nom)");
+        $query = $this->db->prepare("INSERT INTO `users`(`ID`, `login`, `pass`, `mail`, `last_name`) VALUES (null, :username, :pass , :mail, :nom)");
         $query->execute(array(
             ':username' => $username,
             ':pass' => $pass,
@@ -41,7 +41,7 @@ class DbUsers
     }
 
     public function sameLogin($username){
-        $query = $this->db->prepare('SELECT * FROM user WHERE login = :username');
+        $query = $this->db->prepare('SELECT * FROM users WHERE login = :username');
 
         $query->execute(array(
             ':username' => $username,
@@ -52,7 +52,7 @@ class DbUsers
     }
 
     public function selectIdUser($username){
-        $query = $this->db->prepare('SELECT * FROM user WHERE login = :username');
+        $query = $this->db->prepare('SELECT * FROM users WHERE login = :username');
 
         $query->execute(array(
             ':username' => $username,
@@ -63,7 +63,7 @@ class DbUsers
     }
 
     public function selectUserWithId($id){
-        $query = $this->db->prepare('SELECT * FROM user WHERE ID = :id');
+        $query = $this->db->prepare('SELECT * FROM users WHERE ID = :id');
 
         $query->execute(array(
             ':id' => $id,
@@ -74,7 +74,7 @@ class DbUsers
     }
 
     public function selectUserWithLogin($login){
-        $query = $this->db->prepare('SELECT * FROM user WHERE login = :login');
+        $query = $this->db->prepare('SELECT * FROM users WHERE login = :login');
 
         $query->execute(array(
             ':login' => $login,

@@ -11,7 +11,7 @@ include_once 'VIEW/ViewInscription.php';
 include_once 'VIEW/ViewMonCompte.php';
 include_once 'VIEW/ViewPartage.php';
 
-
+//dd
 // /Admin/index/tot/1
 $url = filter_input(INPUT_GET, 'url');
 if (empty($url)) {
