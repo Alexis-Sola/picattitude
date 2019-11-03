@@ -34,7 +34,7 @@ if (isset($_POST['login']) && isset($_POST['pass1']) && isset($_POST['pass2']) &
     }
     else{
 
-        if(strlen($pass1) < 8){
+        if(strlen($pass1) < 0){
             $result = 3;
         }
 

@@ -12,6 +12,7 @@ class DbConnection
     private $dbName;
     private $username;
     private $pass;
+    public $err_connec_bd;
 
     /**
      * DbConnection constructor.
@@ -23,15 +24,21 @@ class DbConnection
 
     public function __construct()
     {
-        $this->host = 'mysql-alexissola.alwaysdata.net';
-        $this->dbName = 'alexissola_bd';
-        $this->username = 192834;
-        $this->pass = 'Alexis07?';
+        $this->host = 'localhost';
+        $this->dbName = 'id11344999_sharepics';
+        $this->username = 'id11344999_alexis';
+        $this->pass = 'azerty';
     }
 
     public function connection(){
-        $db = new PDO("mysql:host=$this->host;dbname=$this->dbName", $this->username, $this->pass);
-        return $db;
+        try {
+                $conn = new PDO("mysql:host=$this->host;dbname=$this->dbName", $this->username, $this->pass);
+                // set the PDO error mode to exception
+                $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+                return $conn;
+            } catch(PDOException $e) {
+                $this->err_connec_bd =  "Connection failed: " . $e->getMessage();
+            }
     }
 
 }

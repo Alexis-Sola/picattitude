@@ -29,9 +29,9 @@ $(document).ready(function() {
                 case 2:
                     $("#erreurinsc").html("<p style='color: red'><strong>Votre login existe déjà...</strong></p>");
                     break;
-                case 3:
-                    $("#erreurinsc").html("<p style='color: red'><strong>Mot de passe trop court...</strong></p>");
-                    break;
+                //case 3:
+                    //$("#erreurinsc").html("<p style='color: red'><strong>Mot de passe trop court...</strong></p>");
+                    //break;
                 case 4:
                     $("#erreurinsc").html("<p style='color: red'><strong>Les mots de passes ne correspondent pas !</strong></p>");
                     break;

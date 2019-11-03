@@ -12,16 +12,15 @@ class StartEnd
     public function start($title, $script){
         ?>
         <!DOCTYPE html>
-        <html lang="fr" xmlns:https="http://www.w3.org/1999/xhtml">
-        <head>
+        <head lang="fr">
             <meta charset="utf-8">
             <title><?php echo $title; ?></title>
             <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
             <script src="../JS/jquery-3.3.1.min.js"></script>
-            <script src="../JS/affichageGeneral.js"></script>
-            <script src="../JS/deconnexion.js"></script>
             <script src="../JS/validateConnexion.js"></script>
             <script src="../JS/validateInscription.js"></script>
+            <script src="../JS/deconnexion.js"></script>
+            <script src="../JS/affichageGeneral.js"></script>
             <script src="../JS/<?php echo $script;?>.js"></script>
             <script src="../JS/redirectIsConnected.js"></script>
             <link rel="icon" type="image/x-icon" href="../image/photo-camera.png" />
@@ -30,7 +29,7 @@ class StartEnd
         </head>
         <body>
         <form method="post" action="../JS/utils/login.php" id="formconnec">
-           </form>
+        </form>
         <form method="post" action="../JS/utils/inscription.php" id="forminsc">
         </form>
         <?php

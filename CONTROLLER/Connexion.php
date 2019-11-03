@@ -26,7 +26,7 @@ class Connexion implements Display
 
     public function Display($data = [])
     {
-        $this->startEnd->startWith2Script('Connexion', 'validateConnexion', 'dynamicFormConnection');
+        $this->startEnd->start('Connexion', 'validateConnexion');
         $this->viewConnexion->createConnexion();
         $this->startEnd->end();
     }

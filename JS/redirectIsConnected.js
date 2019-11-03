@@ -10,20 +10,21 @@ $.ajax({
     //si c'est vrai on construit le site en fonction de l'url où il se trouve
     if(data === true){
         let url = window.location.href;
+        let pathurl = "http://alexissola.xyz/";
         navbar();
         $("#navbar").hide().toggle("slide");
-        if(url === "https://share-pics.alwaysdata.net/Accueil" || "https://share-pics.alwaysdata.net"){
+        if(url === pathurl + "Accueil" || pathurl){
             emptyuseless();
             images();
             $("#images").hide().fadeIn(2000);
         }
-        if(url ===  "https://share-pics.alwaysdata.net/PartagePhoto"){
+        if(url ===  pathurl + "PartagePhoto"){
             emptyuseless();
             partagePhoto();
             $("#ajoutPhoto").hide().fadeIn(2000);
         }
-        if(url ===  "https://share-pics.alwaysdata.net/MonCompte"){
-            emptyuseless()
+        if(url ===  pathurl + "MonCompte"){
+            emptyuseless();
             imagesuppr();
         }
 

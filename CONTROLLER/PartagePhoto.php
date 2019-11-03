@@ -38,11 +38,12 @@ class PartagePhoto implements Display
     public function ajoutPhotos(){
 
         $error = false;
-        $result = "Photo ajouté avec succés";
+        $result = "Photo ajouté avec succès";
 
         try {
             $bytes = random_bytes(16);
         } catch (Exception $e) {
+            echo 'problem';
         }
 
         $newName = bin2hex($bytes);
@@ -58,12 +59,12 @@ class PartagePhoto implements Display
 
         $extension = pathinfo($actualName, PATHINFO_EXTENSION);
 
+
         if(strlen($titre) > 25){
             $error = true;
             $result = "Titre trop long ! 25 caractères max !";
             $this->partage->showBadResult($result);
         }
-
 
         if(strlen($descrip) > 100){
             $error = true;
@@ -94,7 +95,8 @@ class PartagePhoto implements Display
             $this->partage->showBadResult($result);
         }
 
-        if (!$error) {
+        if ($error === false) {
+
             $dbConnec = new DbConnection();
             $db = $dbConnec->connection();
             $dbImages = new DbImages($db);
@@ -103,7 +105,7 @@ class PartagePhoto implements Display
             $target = "image/" . $newName . '.' . $extension;
 
             $user =  $_SESSION['user_id'];
-            $date = date('d/m/Y');
+            $date = date('Y-m-d');
 
             $this->dbImages->insertImages($newName . '.' . $extension, $titre, $descrip, $user, $date);
 
@@ -117,16 +119,18 @@ class PartagePhoto implements Display
 
         }
 
-
     }
 
     public function Display($data = [])
     {
         $this->startEnd->startWith2Script('Partage', 'dynamicNav', 'dynamicAddPics');
         $this->startEnd->navbar();
+
         if(isset($_POST['action'])){
+
             $this->ajoutPhotos();
         }
+
         $this->partage->showPartage();
         $this->startEnd->end();
     }

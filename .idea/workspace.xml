@@ -2,39 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e96d6310-7baa-4b8b-9a0b-2c8c9964ba4f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/webServers.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/deployment.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/webServers.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/webServers.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CONTROLLER/Connexion.php" beforeDir="false" afterPath="$PROJECT_DIR$/CONTROLLER/Connexion.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CONTROLLER/PartagePhoto.php" beforeDir="false" afterPath="$PROJECT_DIR$/CONTROLLER/PartagePhoto.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JS/redirectIsConnected.js" beforeDir="false" afterPath="$PROJECT_DIR$/JS/redirectIsConnected.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JS/utils/inscription.php" beforeDir="false" afterPath="$PROJECT_DIR$/JS/utils/inscription.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JS/validateInscription.js" beforeDir="false" afterPath="$PROJECT_DIR$/JS/validateInscription.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MODEL/DbConnection.php" beforeDir="false" afterPath="$PROJECT_DIR$/MODEL/DbConnection.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MODEL/DbUsers.php" beforeDir="false" afterPath="$PROJECT_DIR$/MODEL/DbUsers.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/039d50e9acfa9716502b7006678d3fcd.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/0914114943660cdc5ea3cdd167db4241.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/1d57f7cc7ce915f8ee642052173a8be6.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/27825eb0480453e107706c8e7fabbc83.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/2e72b7e1b4a9790a28aa8f5b01f0f2bd.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/3b136be80f38e850e574415a159fec0c.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/3fc571ffada944c55a0f7729deedb03a.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/4292b74490dc0e190a16b2d20be60c15.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/492784.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/4c8555c69decfd2c164bb4ffd034da86.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/60f65b4af2e4e234e401b09553ca1169.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/6edce6daee225e4b7975c106ee5061ae.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/7a9a3a636683fe1dd1c8f829d8db19d2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/972520742dd63d14722200a40b9de386.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/99c0aec9865491a4bcc610cf336a5a47.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/9ccaa7d600fe4a944af2fdbea0b1ba27.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/a19d0548cf76973c92ee993a4ae7d129.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/acb36faa240dc663df2561e6e41b4a6a.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/b3a6e2c0811a95dd3008105682de0907.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/bbd3c9317dc3685a4bbd136fdcf970fb.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/ca8921757f8c9cb1f3b55cb382dd816b.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/cdd991bcedb1b840f5b27ed043921994.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/d4a3d7cdbc32bbcd77d585fea6f42def.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/d701b230016b1ec23c9f84f60a2949ea.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/da8b7cc119e1154c4d38a1b4966194f8.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/dc812bd52b55bc5b69425b7ca7856fd9.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/photo-camera.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MODEL/DbImages.php" beforeDir="false" afterPath="$PROJECT_DIR$/MODEL/DbImages.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VIEW/StartEnd.php" beforeDir="false" afterPath="$PROJECT_DIR$/VIEW/StartEnd.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -48,6 +26,20 @@
       <executable />
     </execution>
   </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -55,7 +47,12 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="WebServerToolWindowFactoryState" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
@@ -83,6 +80,8 @@
       <updated>1571937173702</updated>
       <workItem from="1571937176280" duration="11000" />
       <workItem from="1571937248516" duration="6736000" />
+      <workItem from="1572731057941" duration="2908000" />
+      <workItem from="1572804325109" duration="9710000" />
     </task>
     <servers />
   </component>
@@ -94,7 +93,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
