@@ -213,7 +213,7 @@ let partagePhoto = function () {
                     $("<button />", {
                         class: "btn btn-outline-primary",
                         type: "submit",
-                        name: "action"
+                        name: "actionn"
                     }).text("Ajouter")
                 )
         )
@@ -453,10 +453,11 @@ let navbar = function() {
                                 class: "nav-item"
                             })
                                 .append(
-                                    $("<a />", {
-                                        class: "nav-link",
-                                        href: "PartagePhoto"
-                                    }).text("Partager votre photo !")
+                                    $("<button />", {
+                                        class: "btn btn-dark",
+                                        "data-toggle": "modal",
+                                        "data-target":"#modal-add-pic"
+                                    }).text("Upload une image").css("cursor", "crosshair")
                                 )
                         ),
                     $("<a />", {

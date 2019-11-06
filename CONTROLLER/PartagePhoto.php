@@ -123,8 +123,8 @@ class PartagePhoto implements Display
 
     public function Display($data = [])
     {
-        $this->startEnd->startWith2Script('Partage', 'dynamicNav', 'dynamicAddPics');
-        $this->startEnd->navbar();
+        $this->startEnd->head_file('Partage');
+        $this->startEnd->formaction_deconnection_navbar();
 
         if(isset($_POST['action'])){
 
@@ -132,7 +132,7 @@ class PartagePhoto implements Display
         }
 
         $this->partage->showPartage();
-        $this->startEnd->end();
+        $this->startEnd->footer_file();
     }
 
 }

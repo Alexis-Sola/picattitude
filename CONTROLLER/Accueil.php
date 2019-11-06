@@ -13,6 +13,8 @@ include_once 'VIEW/StartEnd.php';
 include_once 'MODEL/DbImages.php';
 include_once 'MODEL/DbUsers.php';
 include_once 'MODEL/DbConnection.php';
+include_once 'VIEW/ViewAddPic.php';
+
 
 class Accueil implements Display
 {
@@ -21,6 +23,7 @@ class Accueil implements Display
     private $dbImages;
     private $dbUser;
     private $dbConnec;
+    private $modal_add_pic;
 
     /**
      * Accueil constructor.
@@ -33,14 +36,16 @@ class Accueil implements Display
         $db = $this->dbConnec->connection();
         $this->dbImages = new DbImages($db);
         $this->dbUser = new DbUsers($db);
+        $this->modal_add_pic = new ViewAddPic();
     }
 
     public function Display($data = [])
     {
 
-        $this->startEnd->start('SharePics', 'affichageImage');
-        $this->startEnd->navbar();
-        $this->viewAccueil->createMain();
-        $this->startEnd->end();
+        $this->startEnd->head_file('SharePics');
+        $this->modal_add_pic->modal_add_pic();
+        $this->startEnd->formaction_deconnection_navbar();
+        $this->viewAccueil->show_pictures_index();
+        $this->startEnd->footer_file();
     }
 }

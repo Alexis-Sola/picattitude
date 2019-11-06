@@ -37,8 +37,8 @@ class MonCompte implements Display
 
     public function Display($data = [])
     {
-        $this->startEnd->start('SharePics', 'supprimerPhoto');
-        $this->startEnd->navbar();
+        $this->startEnd->head_file('SharePics', 'supprimerPhoto');
+        $this->startEnd->formaction_deconnection_navbar();
         $this->viewMonCompte->createmain();
 
         $cpt = 0;
@@ -59,7 +59,7 @@ class MonCompte implements Display
 
         }
         $this->viewMonCompte->closeDiv();*/
-        $this->startEnd->end();
+        $this->startEnd->footer_file();
     }
 
 }

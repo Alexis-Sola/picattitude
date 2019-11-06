@@ -26,9 +26,9 @@ class Inscription implements Display
 
     public function Display($data = [])
     {
-        $this->startEnd->start('Inscription', 'validateInscription');
+        $this->startEnd->head_file('Inscription', 'validateInscription');
         $this->viewInscription->createInscription();
-        $this->startEnd->end();
+        $this->startEnd->footer_file();
     }
 
 }

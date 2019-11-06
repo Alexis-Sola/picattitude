@@ -26,8 +26,8 @@ class Connexion implements Display
 
     public function Display($data = [])
     {
-        $this->startEnd->start('Connexion', 'validateConnexion');
+        $this->startEnd->head_file('Connexion', 'validateConnexion');
         $this->viewConnexion->createConnexion();
-        $this->startEnd->end();
+        $this->startEnd->footer_file();
     }
 }

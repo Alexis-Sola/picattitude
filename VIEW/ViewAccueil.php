@@ -8,10 +8,10 @@
 
 session_start();
 
-class ViewAccueil{
+class ViewAccueil
+{
 
-    public function createMain(){
-
+    public function show_pictures_index(){
         ?>
         <div id="images">
             <h1 style="text-align: center; color: white; margin-top: 1em">Images partagées</h1>
