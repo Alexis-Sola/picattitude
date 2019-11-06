@@ -14,6 +14,7 @@ include_once 'MODEL/DbImages.php';
 include_once 'MODEL/DbUsers.php';
 include_once 'MODEL/DbConnection.php';
 include_once 'VIEW/ViewAddPic.php';
+include_once 'VIEW/ViewNavigationBar.php';
 
 
 class Accueil implements Display
@@ -24,6 +25,7 @@ class Accueil implements Display
     private $dbUser;
     private $dbConnec;
     private $modal_add_pic;
+    private $navbar;
 
     /**
      * Accueil constructor.
@@ -37,12 +39,14 @@ class Accueil implements Display
         $this->dbImages = new DbImages($db);
         $this->dbUser = new DbUsers($db);
         $this->modal_add_pic = new ViewAddPic();
+        $this->navbar = new ViewNavigationBar();
     }
 
     public function Display($data = [])
     {
 
         $this->startEnd->head_file('SharePics');
+        $this->navbar->nav_bar();
         $this->modal_add_pic->modal_add_pic();
         $this->startEnd->formaction_deconnection_navbar();
         $this->viewAccueil->show_pictures_index();

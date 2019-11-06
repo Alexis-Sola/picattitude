@@ -11,7 +11,7 @@ $.ajax({
     if(data === true){
         let url = window.location.href;
         let pathurl = "http://alexissola.xyz/";
-        navbar();
+        //navbar();
         $("#navbar").hide().toggle("slide");
         if(url === pathurl + "Accueil" || pathurl){
             emptyuseless();

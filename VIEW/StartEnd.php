@@ -42,13 +42,8 @@ class StartEnd
         <body>
         <form method="post" action="../JS/utils/login.php" id="formconnec">
         </form>
-
         <form method="post" action="../JS/utils/inscription.php" id="forminsc">
         </form>
-
-        <div id="add-pic">
-
-        </div>
         <?php
     }
 

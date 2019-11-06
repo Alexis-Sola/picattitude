@@ -12,6 +12,8 @@ include_once 'VIEW/StartEnd.php';
 include_once 'MODEL/DbImages.php';
 include_once 'MODEL/DbUsers.php';
 include_once 'MODEL/DbConnection.php';
+include_once 'VIEW/ViewNavigationBar.php';
+
 
 class MonCompte implements Display
 {
@@ -20,6 +22,8 @@ class MonCompte implements Display
     private $dbImages;
     private $dbUser;
     private $dbConnec;
+    private $navbar;
+
 
     /**
      * Accueil constructor.
@@ -32,12 +36,15 @@ class MonCompte implements Display
         $db = $this->dbConnec->connection();
         $this->dbImages = new DbImages($db);
         $this->dbUser = new DbUsers($db);
+        $this->navbar = new ViewNavigationBar();
+
     }
 
 
     public function Display($data = [])
     {
         $this->startEnd->head_file('SharePics', 'supprimerPhoto');
+        $this->navbar->nav_bar();
         $this->startEnd->formaction_deconnection_navbar();
         $this->viewMonCompte->createmain();
 

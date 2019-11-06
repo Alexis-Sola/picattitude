@@ -2,18 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e96d6310-7baa-4b8b-9a0b-2c8c9964ba4f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/JS/utils/add_pic.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JS/validate_addpic.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/VIEW/ViewAddPic.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VIEW/ViewNavigationBar.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/492784.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/bg.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CONTROLLER/Accueil.php" beforeDir="false" afterPath="$PROJECT_DIR$/CONTROLLER/Accueil.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CONTROLLER/Connexion.php" beforeDir="false" afterPath="$PROJECT_DIR$/CONTROLLER/Connexion.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CONTROLLER/Inscription.php" beforeDir="false" afterPath="$PROJECT_DIR$/CONTROLLER/Inscription.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CONTROLLER/MonCompte.php" beforeDir="false" afterPath="$PROJECT_DIR$/CONTROLLER/MonCompte.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CONTROLLER/PartagePhoto.php" beforeDir="false" afterPath="$PROJECT_DIR$/CONTROLLER/PartagePhoto.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CONTROLLER/PartagePhoto.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/JS/affichageGeneral.js" beforeDir="false" afterPath="$PROJECT_DIR$/JS/affichageGeneral.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JS/redirectIsConnected.js" beforeDir="false" afterPath="$PROJECT_DIR$/JS/redirectIsConnected.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JS/utils/add_pic.php" beforeDir="false" afterPath="$PROJECT_DIR$/JS/utils/add_pic.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/VIEW/StartEnd.php" beforeDir="false" afterPath="$PROJECT_DIR$/VIEW/StartEnd.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VIEW/ViewAccueil.php" beforeDir="false" afterPath="$PROJECT_DIR$/VIEW/ViewAccueil.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -66,6 +65,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\alexi\Documents\Prog\PhpStorm\SharePics\image" />
       <recent name="C:\Users\alexi\Documents\Prog\PhpStorm\SharePics\JS\utils" />
       <recent name="C:\Users\alexi\Documents\Prog\PhpStorm\SharePics" />
       <recent name="C:\Users\alexi\Documents\Prog\PhpStorm\SharePics\JS" />
@@ -97,7 +97,7 @@
       <workItem from="1571937248516" duration="6736000" />
       <workItem from="1572731057941" duration="2908000" />
       <workItem from="1572804325109" duration="53293000" />
-      <workItem from="1573030222425" duration="16804000" />
+      <workItem from="1573030222425" duration="25090000" />
     </task>
     <servers />
   </component>

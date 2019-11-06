@@ -71,11 +71,15 @@ h4{
      color: white;
  }
 
- nav{
-     background-color: black;
- }
 
  h4{
      color: black;
  }
 
+ #navbarDropdown{
+     color:black;
+ }
+
+#navbar{
+    opacity: 0.9;
+}

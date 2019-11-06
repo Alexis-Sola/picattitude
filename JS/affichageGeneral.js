@@ -421,7 +421,7 @@ let modal = $("<div />", {
     );
 
 //bar de navigation
-let navbar = function() {
+/*let navbar = function() {
     $("#navbar").append(
         $("<nav />", {
             class: "navbar navbar-expand-lg navbar-dark",
@@ -474,4 +474,4 @@ let navbar = function() {
                 )
         )
     )
-};
+};*/
