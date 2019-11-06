@@ -11,7 +11,7 @@ class ViewNavigationBar
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
-        <button class="btn btn-outline-dark" data-toggle="modal" data-target="#modal-add-pic">Importer un photo</button>
+        <button class="btn btn-outline-dark" data-toggle="modal" data-target="#modal-add-pic">Importer une photo</button>
       </li>
     </ul>
     <form class="form-inline col-md-5 col-md-offset-5">
