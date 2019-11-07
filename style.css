@@ -1,7 +1,7 @@
 body{
-    background-size: cover;
-    background: url("image/492784.jpg") no-repeat fixed;
     position: relative;
+    background-image: url("image/bg3.png");
+    background-attachment: fixed;
 
     display: flex;
     flex-direction: column;
@@ -17,20 +17,11 @@ h1{
 
 label{color: black}
 
-.cardAccueil{
-    color: black;
-}
 
 .sans-nav{
     margin-top: 3em;
 }
 
-#footer{
-    margin-top: auto;
-    background: #2599C2;
-    color: white;
-    padding: 15px;
-}
 
 #images, #imagessuppr{
     background-color: black;
@@ -82,4 +73,19 @@ h4{
 
 #navbar{
     opacity: 0.9;
+    margin-bottom: 1em;
+}
+
+.card-size{
+    width: 20%;
+    height: 30%;
+    opacity: 0.8;
+}
+
+.card-columns {
+    column-count: 4;
+}
+
+#first-card{
+    margin-bottom: 2em;
 }

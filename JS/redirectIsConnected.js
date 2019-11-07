@@ -15,8 +15,8 @@ $.ajax({
         $("#navbar").hide().toggle("slide");
         if(url === pathurl + "Accueil" || pathurl){
             emptyuseless();
-            images();
-            $("#images").hide().fadeIn(2000);
+            //images();
+            //  $("#images").hide().fadeIn(2000);
         }
         if(url ===  pathurl + "PartagePhoto"){
             emptyuseless();

@@ -16,14 +16,25 @@ class StartEnd
         <head lang="fr">
             <meta charset="utf-8">
             <title><?php echo $title; ?></title>
-            <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+            <!--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">-->
+            <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+            <!-- Bootstrap core CSS -->
+            <link href="/css/css/bootstrap.min.css" rel="stylesheet">
+            <!-- Material Design Bootstrap -->
+            <link href="/css/css/mdb.min.css" rel="stylesheet">
+            <!-- Your custom styles (optional) -->
+            <script type="text/javascript" src="/css/js/popper.min.js"></script>
+            <!-- Bootstrap core JavaScript -->
+            <script type="text/javascript" src="/css/js/bootstrap.min.js"></script>
+            <!-- MDB core JavaScript -->
+            <script type="text/javascript" src="/css/js/mdb.min.js"></script>
+            <link href="/style.css" rel="stylesheet">
             <script src="../JS/jquery-3.3.1.min.js"></script>
             <script src="../JS/validateConnexion.js"></script>
             <script src="../JS/validateInscription.js"></script>
             <script src="../JS/deconnexion.js"></script>
             <script src="../JS/affichageGeneral.js"></script>
             <script src="../JS/redirectIsConnected.js"></script>
-            <script src="../JS/add_pictures.js"></script>
             <script src="/JS/validate_addpic.js"></script>
 
         <?php
@@ -40,6 +51,7 @@ class StartEnd
             <link rel="stylesheet" type="text/css" href="../style.css">
         </head>
         <body>
+        <div id="bg-image"></div>
         <form method="post" action="../JS/utils/login.php" id="formconnec">
         </form>
         <form method="post" action="../JS/utils/inscription.php" id="forminsc">
@@ -51,12 +63,57 @@ class StartEnd
     public function footer_file()
     {
         ?>
-        <footer id="sticky-footer" class="py-4 bg-dark text-white-50">
-            <div class="container text-center">
-                <small>Copyright &copy; Your Website</small>
+        <!-- Footer -->
+        <footer class="page-footer font-small special-color-dark pt-4">
+
+            <!-- Footer Elements -->
+            <div class="container">
+
+                <!--Grid row-->
+                <div class="row">
+
+                    <!--Grid column-->
+                    <div class="col-md-6 mb-4">
+
+                        <!-- Form -->
+                        <form class="form-inline">
+                            <input class="form-control form-control-sm mr-3 w-75" type="text" placeholder="Search"
+                                   aria-label="Search">
+                            <i class="fas fa-search" aria-hidden="true"></i>
+                        </form>
+                        <!-- Form -->
+
+                    </div>
+                    <!--Grid column-->
+
+                    <!--Grid column-->
+                    <div class="col-md-6 mb-4">
+
+                        <form class="input-group">
+                            <input type="text" class="form-control form-control-sm" placeholder="Your email"
+                                   aria-label="Your email" aria-describedby="basic-addon2">
+                            <div class="input-group-append">
+                                <button class="btn btn-sm btn-outline-white my-0" type="button">Sign up</button>
+                            </div>
+                        </form>
+
+                    </div>
+                    <!--Grid column-->
+
+                </div>
+                <!--Grid row-->
+
             </div>
+            <!-- Footer Elements -->
+
+            <!-- Copyright -->
+            <div class="footer-copyright text-center py-3">© 2018 Copyright:
+                <a href="https://mdbootstrap.com/education/bootstrap/"> MDBootstrap.com</a>
+            </div>
+            <!-- Copyright -->
+
         </footer>
-        </body>
+        <!-- Footer -->
         <?php
     }
 

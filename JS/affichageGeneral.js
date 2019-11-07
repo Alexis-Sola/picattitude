@@ -4,7 +4,7 @@ et variables qui servent à l'affichage dans le site
  */
 
 //création des images dans l'accueil
-let images = function (){
+/*let images = function (){
     $.ajax({
         url: '../JS/utils/affichageCardAccueil.php',
         type: 'get',
@@ -74,7 +74,7 @@ let images = function (){
             }
         }
     });
-};
+};*/
 
 //création ds images pour mon compte
 let imagesuppr = function() {
