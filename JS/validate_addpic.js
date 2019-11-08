@@ -1,4 +1,8 @@
 $(document).ready(function (e) {
+    $("#validate").click(function () {
+        $("#validate").hide();
+    });
+
     $("#form-pic").on('submit',(function(e) {
         e.preventDefault();
         $.ajax({
@@ -11,15 +15,18 @@ $(document).ready(function (e) {
 
         }).done(function (data) {
             if(data === "Photo ajouté avec succés"){
-                $("#retour-add-pic").html("<div class=\"alert alert-dark\" role=\"alert\">" + data + "</div>")
+                $("#retour-add-pic").html("<div class=\"alert alert-dark\" role=\"alert\">" + data + "</div>");
                 location.reload();
+                $("#validate").show();
             }
             else{
-                $("#retour-add-pic").html("<div class=\"alert alert-danger\" role=\"alert\">" + data + "</div>")
+                $("#retour-add-pic").html("<div class=\"alert alert-danger\" role=\"alert\">" + data + "</div>");
+                $("#validate").show();
             }
         });
     }));
 });
+
 
 let showname = function () {
     let name = document.getElementById('file-upload');
