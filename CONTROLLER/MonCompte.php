@@ -13,6 +13,7 @@ include_once 'MODEL/DbImages.php';
 include_once 'MODEL/DbUsers.php';
 include_once 'MODEL/DbConnection.php';
 include_once 'VIEW/ViewNavigationBar.php';
+include_once 'VIEW/ViewAddPic.php';
 
 
 class MonCompte implements Display
@@ -23,6 +24,8 @@ class MonCompte implements Display
     private $dbUser;
     private $dbConnec;
     private $navbar;
+    private $modal_add_pic;
+
 
 
     /**
@@ -37,6 +40,7 @@ class MonCompte implements Display
         $this->dbImages = new DbImages($db);
         $this->dbUser = new DbUsers($db);
         $this->navbar = new ViewNavigationBar();
+        $this->modal_add_pic = new ViewAddPic();
 
     }
 
@@ -45,27 +49,18 @@ class MonCompte implements Display
     {
         $this->startEnd->head_file('SharePics', 'supprimerPhoto');
         $this->navbar->nav_bar();
-        $this->startEnd->formaction_deconnection_navbar();
-        $this->viewMonCompte->createmain();
+        $this->modal_add_pic->modal_add_pic();
+        $this->viewMonCompte->head_table();
 
-        $cpt = 0;
+        $result = $this->dbImages->getImageUser($_SESSION['user_id']);
 
-        /*foreach ($result as $row){
+        foreach ($result as $row){
 
-            $user = $this->dbUser->selectUserWithLogin($row['users']);
-
-            if($cpt === 0){
-                $this->viewMonCompte->rowCard();
-            }
-            elseif($cpt % 2 === 0){
-                $this->viewMonCompte->closeDiv();
-                $this->viewMonCompte->rowCard();
-            }
-            $this->viewMonCompte->showImagesBd($row['name'], $row['titre'], $row['desc'], $row['date'], $row['ID'], $user['login']);
-            ++$cpt;
-
+            $this->viewMonCompte->table_user_account($row['ID'], $row['name']);
         }
-        $this->viewMonCompte->closeDiv();*/
+        $this->viewMonCompte->close_tab();
+
+        $this->startEnd->formaction_deconnection_navbar();
         $this->startEnd->footer_file();
     }
 

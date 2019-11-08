@@ -3,7 +3,7 @@
 */
 
 $(document).ready(function() {
-    $("#formDelPics").submit(function (data){
+    $("#form-rm-pic").submit(function (data){
         $.ajax({
             url: $(this).attr("action"),
             type: $(this).attr("method"),

@@ -12,6 +12,7 @@ $(document).ready(function (e) {
         }).done(function (data) {
             if(data === "Photo ajouté avec succés"){
                 $("#retour-add-pic").html("<div class=\"alert alert-dark\" role=\"alert\">" + data + "</div>")
+                location.reload();
             }
             else{
                 $("#retour-add-pic").html("<div class=\"alert alert-danger\" role=\"alert\">" + data + "</div>")

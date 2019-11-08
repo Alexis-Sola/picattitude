@@ -19,16 +19,10 @@ $connection = new DbConnection();
 $db = $connection->connection();
 $dbimage = new DbImages($db);
 
-$result = false;
+$idImage = $_POST['id-user'];
+$result = $dbimage->getImageId($idImage);
+$name =  "../../image/" . $result['name'];
+unlink($name);
+$dbimage->deleteImage($idImage);
 
-if(isset($_POST['idCard'])){
-    header("Location: https://share-pics.alwaysdata.net/MonCompte");
-    $idImage = $_POST['idCard'];
-    $result = $dbimage->getImageId($idImage);
-    $name =  "../../image/" . $result['name'];
-    unlink($name);
-    $dbimage->deleteImage($idImage);
-    $result = true;
-}
-
-echo json_encode($result);
+echo json_encode(true);

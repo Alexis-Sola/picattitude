@@ -77,7 +77,7 @@ et variables qui servent à l'affichage dans le site
 };*/
 
 //création ds images pour mon compte
-let imagesuppr = function() {
+/*let imagesuppr = function() {
     $.ajax({
         url: '../JS/utils/affichageCardMonCompte.php',
         type: 'get',
@@ -153,10 +153,10 @@ let imagesuppr = function() {
         }
 
     });
-};
+};*/
 
 //formulaire pour afficher le formulaire d'ajout de photo
-let partagePhoto = function () {
+/*let partagePhoto = function () {
     $(document).ready(function () {
         $("#ajoutPhoto").append(
             $("<form />", {
@@ -219,7 +219,7 @@ let partagePhoto = function () {
         )
     });
 };
-
+*/
 //formulaire de connexion pour le modal
 let connexion =
     $("<div />", {class: "mx-auto", id: "formulaire"}).append(

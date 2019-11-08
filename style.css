@@ -79,7 +79,7 @@ h4{
 .card-size{
     width: 20%;
     height: 30%;
-    opacity: 0.8;
+    opacity: 0.9;
 }
 
 .card-columns {
@@ -88,4 +88,12 @@ h4{
 
 #first-card{
     margin-bottom: 2em;
+}
+
+.body-table{
+    background-color: whitesmoke;
+}
+
+.table td thead{
+    text-align: center;
 }
