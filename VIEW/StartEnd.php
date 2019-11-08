@@ -107,8 +107,8 @@ class StartEnd
             <!-- Footer Elements -->
 
             <!-- Copyright -->
-            <div class="footer-copyright text-center py-3">© 2018 Copyright:
-                <a href="https://mdbootstrap.com/education/bootstrap/"> MDBootstrap.com</a>
+            <div class="footer-copyright text-center py-3">© 2019 Copyright:
+                <a href="https://github.com/Alexis-Sola">Compte github</a>
             </div>
             <!-- Copyright -->
 
