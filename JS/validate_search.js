@@ -32,7 +32,7 @@ let card_image = function (title, desc, login, date, name) {
                     href: "/image/" + name,
                     text: "Voir l\'image"
                 })
-                ) 
+                )
             )
     )
 

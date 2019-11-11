@@ -52,7 +52,7 @@ class DbSearch
             //$keyvalue[':word' . $cpt] = $word;
             //$cpt ++;
         }
-        $sql .= '1 = 0;';
+        $sql .= '1 = 0 ORDER BY ID DESC;';
         $result = $this->db->query($sql)->fetchAll();
         //$query->execute($keyvalue);
         //$result = $query->fetchAll();
