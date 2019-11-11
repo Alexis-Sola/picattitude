@@ -25,6 +25,7 @@ class MonCompte implements Display
     private $dbConnec;
     private $navbar;
     private $modal_add_pic;
+    private $dbSearch;
 
 
 

@@ -3,15 +3,12 @@
 session_start();
 
 include_once 'CONTROLLER/Display.php';
-
 include_once 'VIEW/StartEnd.php';
-include_once 'VIEW/ViewAccueil.php';
 include_once 'VIEW/ViewConnexion.php';
 include_once 'VIEW/ViewInscription.php';
 include_once 'VIEW/ViewMonCompte.php';
 include_once 'VIEW/ViewPartage.php';
 
-//dd
 // /Admin/index/tot/1
 $url = filter_input(INPUT_GET, 'url');
 if (empty($url)) {
