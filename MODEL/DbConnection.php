@@ -25,8 +25,8 @@ class DbConnection
     public function __construct()
     {
         $this->host = 'localhost';
-        $this->dbName = 'id11344999_sharepics';
-        $this->username = 'id11344999_alexis';
+        $this->dbName = 'id11344999_picattitude';
+        $this->username = 'id11344999_alexissola';
         $this->pass = 'azerty';
     }
 

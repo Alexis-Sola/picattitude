@@ -20,21 +20,23 @@ class DbImages
         $this->db = $db;
     }
 
-    public function insertImages($nom, $titre, $descrip, $users, $date){
-        $query = $this->db->prepare("INSERT INTO `image`(`ID`, `name`,`titre`, `desc`, `users`, `date`) VALUES (null, :image, :titre, :descrip, :users, :madate)");
+    public function insert_image($title, $description, $picname, $pseudo, $upload_date, $id_user){
+        $query = $this->db->prepare(
+            "INSERT INTO picture VALUES (NULL, :title, :description, :picname, :pseudo, :upload_date, :id_user)");
 
         $query->execute(array(
-                ':image' => $nom,
-                ':titre' => $titre,
-                ':descrip' => $descrip,
-                ':users' => $users,
-                ':madate' => $date
+                ':title' => $title,
+                ':description' => $description,
+                ':picname' => $picname,
+                ':pseudo' => $pseudo,
+                ':upload_date' => $upload_date,
+                ':id_user' => $id_user
             )
         );
     }
 
     public function getAllImages(){
-        $query = $this->db->prepare("SELECT * FROM image ORDER BY ID DESC");
+        $query = $this->db->prepare("SELECT * FROM picture ORDER BY id_picture DESC");
         $query->execute();
 
         $result = $query->fetchAll();
@@ -42,10 +44,10 @@ class DbImages
         return $result;
     }
 
-    public function getImageUser($login){
-        $query = $this->db->prepare('SELECT * FROM image WHERE users = :login ORDER BY ID DESC');
+    public function getImageUser($pseudo){
+        $query = $this->db->prepare('SELECT * FROM picture WHERE pseudo = :pseudo ORDER BY id_picture DESC');
         $query->execute(array(
-                ':login' => $login
+                ':pseudo' => $pseudo
             )
         );
         $result = $query->fetchAll();
@@ -53,7 +55,7 @@ class DbImages
     }
 
     public function getImageId($id){
-        $query = $this->db->prepare('SELECT * FROM image WHERE ID = :id');
+        $query = $this->db->prepare('SELECT * FROM picture WHERE id_picture = :id');
         $query->execute(array(
                 ':id' => $id
             )
@@ -63,7 +65,7 @@ class DbImages
     }
 
     public function deleteImage($id){
-        $query = $this->db->prepare("DELETE FROM `image` WHERE ID = :id");
+        $query = $this->db->prepare("DELETE FROM picture WHERE id_picture = :id");
         $query->execute(array(
                 ':id' => $id
             )
@@ -72,10 +74,10 @@ class DbImages
     }
 
     public function nbImages(){
-        $query = $this->db->prepare('SELECT ID FROM image');
+        $query = $this->db->prepare('SELECT COUNT(id_picture) FROM picture');
         $query->execute();
 
-        $nbRow = $query->rowCount();
+        $nbRow = $query->fetch();
 
         return $nbRow;
     }

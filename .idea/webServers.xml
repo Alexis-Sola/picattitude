@@ -5,7 +5,7 @@
       <webServer id="3881b351-9472-4c2d-934a-e5d66a4fe053" name="sharepics" url="http://files.000webhost.com">
         <fileTransfer host="files.000webhost.com" port="21" rootFolder="/public_html">
           <advancedOptions>
-            <advancedOptions dataProtectionLevel="Private" shareSSLContext="true" />
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
           </advancedOptions>
           <option name="port" value="21" />
         </fileTransfer>

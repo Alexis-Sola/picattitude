@@ -304,7 +304,7 @@ let inscription =
                         name: "pass2",
                         type: "password",
                         class: "form-control",
-                        placeholder: "Entrez le même mot de passe"
+                        placeholder: "Confirmer votre mot de passe"
                     })
                 ),
             $("<div />", {
@@ -316,21 +316,12 @@ let inscription =
                         name: "mail",
                         type: "email",
                         class: "form-control",
-                        placeholder: "Entrez votre email"
+                        placeholder: "Entrez votre mail"
                     })
                 ),
             $("<div />", {
                 class: "form-group"
-            })
-                .append(
-                    $("<label />").text("Entrer votre nom"),
-                    $("<input />", {
-                        name: "name",
-                        type: "text",
-                        class: "form-control",
-                        placeholder: "Entrez votre nom"
-                    })
-                ),
+            }),
             $("<button />", {
                 name: "action",
                 type: "submit",

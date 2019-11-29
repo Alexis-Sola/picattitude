@@ -15,9 +15,18 @@ header('Cache-Control: no-cache, must-revalidate');
 header('Expires: Mon, 26 Jul 1997 05:00:00 GMT');
 header('Content-type: application/json');
 
+if (!empty($_SERVER['HTTP_CLIENT_IP'])) {
+    $ip = $_SERVER['HTTP_CLIENT_IP'];
+} elseif (!empty($_SERVER['HTTP_X_FORWARDED_FOR'])) {
+    $ip = $_SERVER['HTTP_X_FORWARDED_FOR'];
+} else {
+    $ip = $_SERVER['REMOTE_ADDR'];
+}
+
 $result = -1;
 
-if (isset($_POST['login']) && isset($_POST['pass1']) && isset($_POST['pass2']) && isset($_POST['mail']) && isset($_POST['name'])){
+if (isset($_POST['login']) && isset($_POST['pass1']) && isset($_POST['pass2']) && isset($_POST['mail'])){
+
     $connection = new DbConnection();
     $db = $connection->connection();
     $query = new DbUsers($db);
@@ -26,10 +35,9 @@ if (isset($_POST['login']) && isset($_POST['pass1']) && isset($_POST['pass2']) &
     $pass1 = $_POST['pass1'];
     $pass2 = $_POST['pass2'];
     $mail = $_POST['mail'];
-    $name = $_POST['name'];
 
     $nbRow = $query->sameLogin($login);
-    if(empty($login) || empty($pass1) || empty($pass2) || empty($mail) || empty($name)){
+    if(empty($login) || empty($pass1) || empty($pass2) || empty($mail)){
         $result = 0;
     }
     else{
@@ -47,7 +55,8 @@ if (isset($_POST['login']) && isset($_POST['pass1']) && isset($_POST['pass2']) &
         }
         else{
             $result = 1;
-            $query->insertUsers($login, password_hash($pass1,  PASSWORD_DEFAULT), $mail, $name);
+            $_SESSION['rank'] = 'user';
+            $query->insertUsers("user", $ip, password_hash($pass1,  PASSWORD_DEFAULT), $login, $mail);
         }
 
     }

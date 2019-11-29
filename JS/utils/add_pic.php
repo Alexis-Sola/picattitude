@@ -64,10 +64,11 @@ if (!$error) {
 
     $target = "../../image/" . $newName . '.' . $extension;
 
-    $user = $_SESSION['user_id'];
+    $pseudo = $_SESSION['pseudo'];
+    $id_user = $_SESSION['id_user'];
     $date = date('Y-m-d');
 
-    $dbimage->insertImages($newName . '.' . $extension, $titre, $descrip, $user, $date);
+    $dbimage->insert_image($titre,  $descrip,$newName . '.' . $extension, $pseudo, $date, $id_user);
 
     if (move_uploaded_file($image['tmp_name'], $target)) {
         $result = "Photo ajouté avec succés";

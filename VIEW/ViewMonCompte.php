@@ -19,7 +19,7 @@ class ViewMonCompte
 
     public function head_table(){
         echo'
-        <table class="table align-self-center table-hover" style="width: 75%; margin-top: 2em"> 
+        <table class="table align-self-center table-hover" style="width: 75%; margin-top: 2em; margin-left: 13%"> 
           <thead class="black white-text">
             <tr>
               <th scope="col">N° de l\'image</th>

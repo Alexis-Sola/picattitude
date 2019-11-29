@@ -31,8 +31,13 @@ if (isset($_POST['username']) && isset($_POST['password'])){
         $result = 0;
     }
     else{
-        if(password_verify($pass, $resultquery['pass'])){
-            $_SESSION['user_id'] = $username;
+        if(password_verify($pass, $resultquery['password'])){
+
+            $_SESSION['pseudo'] = $username;
+            $_SESSION['id_user'] = $resultquery['id_user'];
+            $_SESSION['rank'] = $resultquery['user_rank'];
+            $_SESSION['ipaddr'] = $resultquery['ip_addr'];
+
             $result = 2;
         }
         else{

@@ -45,7 +45,7 @@ class StartEnd
                 <?php
             }
             ?>
-            <link rel="icon" type="image/x-icon" href="../image/photo-camera.png"/>
+            <link rel="icon" type="image/x-icon" href="../image/icone.png"/>
             <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
                     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
                     crossorigin="anonymous"></script>
@@ -57,6 +57,7 @@ class StartEnd
         </form>
         <form method="post" action="../JS/utils/inscription.php" id="forminsc">
         </form>
+        <div id="global">
         <?php
     }
 
@@ -64,6 +65,7 @@ class StartEnd
     public function footer_file()
     {
         ?>
+        </div>
         <!-- Footer -->
         <footer class="page-footer font-small special-color-dark pt-4">
 
