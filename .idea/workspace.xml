@@ -2,27 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e96d6310-7baa-4b8b-9a0b-2c8c9964ba4f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/CONTROLLER/SharedPics.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.htaccess" beforeDir="false" afterPath="$PROJECT_DIR$/.htaccess" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CONTROLLER/Accueil.php" beforeDir="false" afterPath="$PROJECT_DIR$/CONTROLLER/Accueil.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CONTROLLER/MonCompte.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CONTROLLER/Structure.php" beforeDir="false" afterPath="$PROJECT_DIR$/CONTROLLER/Structure.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JS/affichageGeneral.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/JS/deconnexion.js" beforeDir="false" afterPath="$PROJECT_DIR$/JS/deconnexion.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JS/redirectIsConnected.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/JS/utils/inscription.php" beforeDir="false" afterPath="$PROJECT_DIR$/JS/utils/inscription.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JS/utils/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/JS/utils/login.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JS/validateConnexion.js" beforeDir="false" afterPath="$PROJECT_DIR$/JS/validateConnexion.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JS/validateInscription.js" beforeDir="false" afterPath="$PROJECT_DIR$/JS/validateInscription.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MODEL/DbUsers.php" beforeDir="false" afterPath="$PROJECT_DIR$/MODEL/DbUsers.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VIEW/StartEnd.php" beforeDir="false" afterPath="$PROJECT_DIR$/VIEW/StartEnd.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VIEW/ViewCard.php" beforeDir="false" afterPath="$PROJECT_DIR$/VIEW/ViewCard.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VIEW/ViewModalConnec.php" beforeDir="false" afterPath="$PROJECT_DIR$/VIEW/ViewModalConnec.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VIEW/ViewMonCompte.php" beforeDir="false" afterPath="$PROJECT_DIR$/VIEW/ViewSharedPics.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VIEW/ViewNavigationBar.php" beforeDir="false" afterPath="$PROJECT_DIR$/VIEW/ViewNavigationBar.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VIEW/ViewPartage.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VIEW/ViewSharedPics.php" beforeDir="false" afterPath="$PROJECT_DIR$/VIEW/ViewSharedPics.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -128,7 +111,7 @@
       <workItem from="1573030222425" duration="50256000" />
       <workItem from="1573226474598" duration="31016000" />
       <workItem from="1573828526148" duration="8353000" />
-      <workItem from="1574861137446" duration="38481000" />
+      <workItem from="1574861137446" duration="40351000" />
     </task>
     <servers />
   </component>

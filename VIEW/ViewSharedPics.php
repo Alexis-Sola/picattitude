@@ -9,14 +9,6 @@
 class ViewSharedPics
 {
 
-    public function createmain(){
-        echo'
-                  <div id="imagessuppr">
-                         <h1 style="text-align: center; color: white; margin-top: 1em">Mes images</h1>
-                         <div id="cardsuppr" class="mx-auto"></div>
-                </div>';
-    }
-
     public function head_table(){
         echo'
         <table class="table align-self-center table-hover" style="width: 75%; margin-top: 2em; margin-left: 13%"> 
