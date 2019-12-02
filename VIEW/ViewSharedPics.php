@@ -6,7 +6,7 @@
  * Time: 23:42
  */
 
-class ViewMonCompte
+class ViewSharedPics
 {
 
     public function createmain(){

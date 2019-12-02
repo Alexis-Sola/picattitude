@@ -4,24 +4,33 @@
 */
 
 $(document).ready(function() {
-    $("#formconnec").submit(function (data){
+    $("#validate-connec").click(function () {
+        $("#validate-connec").hide();
+    });
+    $("#form-connec").on('submit', function(e){
+        e.preventDefault();
         $.ajax({
             url: $(this).attr("action"),
             type: $(this).attr("method"),
             data: $(this).serialize(),
         }).done(function(result) {
             if(result === 2){
-                $("#myModal").empty();
+                $("#retour-connec").html("<p style='color: cornflowerblue'><strong>Connexion validée !</strong></p>");
                 location.reload();
             }
             else if(result === 1){
-                $("#erreur").html("<p style='color: red'><strong>Votre login ou votre mot de passe est invalide !</strong></p>");
+                $("#retour-connec").html("<p style='color: red'><strong>Votre login ou votre mot de passe est invalide...</strong></p>");
+                $("#validate-connec").show();
             }
             else if(result === 0){
-                $("#erreur").html("<p style='color: red'><strong>Champs incomplets !</strong></p>");
+                $("#retour-connec").html("<p style='color: red'><strong>Champs incomplets...</strong></p>");
+                $("#validate-connec").show();
+            }
+            else if(result === -1){
+                $("#retour-connec").html("<p style='color: red'><strong>Oups, ça c'est mal passé quelque part... Réessayer.</strong></p>");
+                $("#validate-connec").show();
             }
         });
-        return false;
     });
 });
 

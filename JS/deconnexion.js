@@ -3,10 +3,10 @@
 */
 
 $(document).ready(function() {
-    $("#formDeco").submit(function (data){
+    $("#deco").on('click', function (data){
         $.ajax({
-            url: $(this).attr("action"),
-            type: $(this).attr("method"),
+            url: '/JS/utils/deconnexion.php',
+            type: 'post',
             data: $(this).serialize(),
         }).done(function(result) {
             if(result === true){

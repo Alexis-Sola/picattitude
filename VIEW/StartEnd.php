@@ -33,9 +33,7 @@ class StartEnd
             <script src="../JS/validateConnexion.js"></script>
             <script src="../JS/validateInscription.js"></script>
             <script src="../JS/deconnexion.js"></script>
-            <script src="../JS/affichageGeneral.js"></script>
             <script src="../JS/validate_search.js"></script>
-            <script src="../JS/redirectIsConnected.js"></script>
             <script src="/JS/validate_addpic.js"></script>
 
         <?php

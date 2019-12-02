@@ -6,7 +6,7 @@ include_once 'CONTROLLER/Display.php';
 include_once 'VIEW/StartEnd.php';
 include_once 'VIEW/ViewConnexion.php';
 include_once 'VIEW/ViewInscription.php';
-include_once 'VIEW/ViewMonCompte.php';
+include_once 'VIEW/ViewSharedPics.php';
 include_once 'VIEW/ViewPartage.php';
 
 // /Admin/index/tot/1

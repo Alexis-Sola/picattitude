@@ -4,40 +4,38 @@
 */
 
 $(document).ready(function() {
-    $("#forminsc").submit(function (data){
+    $("#form-insc").on('submit', function (data){
+        $("#validate-insc").click(function () {
+            $("#validate-insc").hide();
+        });
         $.ajax({
-            url: $(this).attr("action"),
-            type: $(this).attr("method"),
+            url: '/JS/utils/inscription.php',
+            type: 'post',
             data: $(this).serialize(),
         }).done(function(result) {
-            $("#erreur").remove();
             switch (result) {
                 case 0:
-                    $("#erreurinsc").html("<p style='color: red'><strong>Le formulaire n'est pas complet !</strong></p>");
+                    $("#retour-insc").html("<p style='color: red'><strong>Le formulaire n'est pas complet...</strong></p>");
+                    $("#validate-insc").show();
                     break;
                 case 1:
-                    $("#removeinsc").remove();
-                    $("#formconnec").append(modal);
-                    $("#bodymodal").append($("<div />", {
-                            id: "erreur"
-                        }), $("<div />", {
-                            id: "success"
-                        }),
-                        connexion);
-                    $("#success").html("<p style='color: dodgerblue'><strong>Votre compte a été créé avec succés ! Vous pouvez vous connecter.</strong></p>");
+                    $("#retour-insc").html("<p style='color: cornflowerblue'><strong>Inscription validée, vous pouvez vous connecter !</strong></p>");
                     break;
                 case 2:
-                    $("#erreurinsc").html("<p style='color: red'><strong>Votre login existe déjà...</strong></p>");
+                    $("#retour-insc").html("<p style='color: red'><strong>Pseudo déjà utilisé...</strong></p>");
+                    $("#validate-insc").show();
                     break;
                 //case 3:
                     //$("#erreurinsc").html("<p style='color: red'><strong>Mot de passe trop court...</strong></p>");
                     //break;
                 case 4:
-                    $("#erreurinsc").html("<p style='color: red'><strong>Les mots de passes ne correspondent pas !</strong></p>");
+                    $("#retour-insc").html("<p style='color: red'><strong>Les mots de passes ne correspondent pas...</strong></p>");
+                    $("#validate-insc").show();
                     break;
 
                 default:
-                    $("#erreurinsc").html("<p style='color: red'><strong>Oups</strong></p>");
+                    $("#retour-insc").html("<p style='color: red'><strong>Une erreur est survenue. Recommencez.</strong></p>");
+                    $("#validate-insc").show();
             }
 
         });

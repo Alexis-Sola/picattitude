@@ -25,6 +25,7 @@ if (!empty($_SERVER['HTTP_CLIENT_IP'])) {
 
 $result = -1;
 
+
 if (isset($_POST['login']) && isset($_POST['pass1']) && isset($_POST['pass2']) && isset($_POST['mail'])){
 
     $connection = new DbConnection();
@@ -50,7 +51,7 @@ if (isset($_POST['login']) && isset($_POST['pass1']) && isset($_POST['pass2']) &
             $result = 4;
         }
 
-        else if($nbRow > 1){
+        else if($nbRow >= 1){
             $result = 2;
         }
         else{
@@ -62,6 +63,5 @@ if (isset($_POST['login']) && isset($_POST['pass1']) && isset($_POST['pass2']) &
     }
 
 }
-
 
 echo json_encode($result);

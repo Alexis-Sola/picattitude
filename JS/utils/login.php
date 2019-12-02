@@ -16,13 +16,13 @@ header('Content-type: application/json');
 
 $result = -1;
 
-if (isset($_POST['username']) && isset($_POST['password'])){
+if (isset($_POST['pseudo']) && isset($_POST['password'])){
 
     $connection = new DbConnection();
     $db = $connection->connection();
     $query = new DbUsers($db);
 
-    $username = $_POST['username'];
+    $username = $_POST['pseudo'];
     $pass = $_POST['password'];
 
     $resultquery = $query->loginUsers($username);

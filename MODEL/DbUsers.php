@@ -46,7 +46,7 @@ class DbUsers
         $query = $this->db->prepare('SELECT * FROM alive_user WHERE pseudo = :username');
 
         $query->execute(array(
-            ':username' => $username,
+            ':username' => $username
         ));
 
         $nbRow = $query->rowCount();
@@ -57,7 +57,7 @@ class DbUsers
         $query = $this->db->prepare('SELECT * FROM alive_user WHERE pseudo = :username');
 
         $query->execute(array(
-            ':username' => $username,
+            ':username' => $username
         ));
 
         $result = $query->fetch();

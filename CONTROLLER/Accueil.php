@@ -27,16 +27,21 @@ class Accueil extends Structure implements Display
 
     public function Display($data = [])
     {
+
+
         $this->getStartEnd()->head_file('pic_attitude(share)');
-        $this->getNavbar()->nav_bar();
+        $this->getNavbar()->nav_bar($this->getConnected());
+        $this->getModalConnec()->modal_connexion();
+        $this->getModalConnec()->modal_insc();
         $this->getModalAddPic()->modal_add_pic();
         $this->getStartEnd()->formaction_deconnection_navbar();
 
         $result =  $this->getDbImages()->getAllImages();
-        $this->cards->first_card();
+        $this->cards->first_card($this->getConnected());
         $this->cards->open_carddeck();
 
-        foreach ($result as $row){
+        foreach ($result as $row) {
+
             $user = $this->getDbUser()->selectUserWithLogin($row['pseudo']);
 
             $this->cards->card_image(
