@@ -29,6 +29,16 @@ class DbUsers
         return $result;
     }
 
+
+    public function getAllUsers(){
+        $query = $this->db->prepare('SELECT * FROM alive_user');
+
+        $query->execute();
+        $result = $query->fetch();
+
+        return $result;
+    }
+
     public function insertUsers($rank, $ipaddr, $pass, $pseudo, $mail){
 
         $query = $this->db->prepare(
