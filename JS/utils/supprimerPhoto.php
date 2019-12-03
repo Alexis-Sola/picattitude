@@ -15,14 +15,21 @@ header('Cache-Control: no-cache, must-revalidate');
 header('Expires: Mon, 26 Jul 1997 05:00:00 GMT');
 header('Content-type: application/json');
 
-$connection = new DbConnection();
-$db = $connection->connection();
-$dbimage = new DbImages($db);
+$result = false;
+$idImage = filter_input(INPUT_POST, 'id-user');
 
-$idImage = $_POST['id-user'];
-$result = $dbimage->getImageId($idImage);
-$name =  "../../image/" . $result['name'];
-unlink($name);
-$dbimage->deleteImage($idImage);
+if(isset($idImage)){
 
-echo json_encode(true);
+    $connection = new DbConnection();
+    $db = $connection->connection();
+    $dbimage = new DbImages($db);
+
+    $result = $dbimage->getImageId($idImage);
+    $name =  "../../image/" . $result['name'];
+    unlink($name);
+    $dbimage->deleteImage($idImage);
+
+    $result = true;
+}
+
+echo json_encode($result);

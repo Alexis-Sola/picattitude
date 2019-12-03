@@ -34,7 +34,7 @@ class ViewSharedPics
           <tbody class="body-table text-center">';
     }
 
-    public function table_user_account($cpt, $name, $pseudo, $rank, $color){
+    public function table_user_account($cpt, $name, $pseudo, $rank, $color, $iduser){
         echo '
     <tr>
       <th scope="row">'. $cpt .'</th>
@@ -48,7 +48,7 @@ class ViewSharedPics
       </td>
       <td>
       <form method="post" action="/JS/utils/supprimerPhoto.php" class="form-rm-pic">  
-        <input type="hidden" value="'.$user.'" name="id-user"/>
+        <input type="hidden" value="'.$iduser.'" name="id-user"/>
         <button type="submit" class="btn btn-elegant btn-block btn-lg">
             Supprimer l\'image de [<span  class="'. $color .'-text"><b>'. $rank .'</b></span>]<b> '.$pseudo.'</b>
          </button>

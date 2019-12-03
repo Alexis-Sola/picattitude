@@ -25,7 +25,7 @@ class ViewModalConnec
                   </div>
                   <button class="btn btn-secondary btn-lg btn-block mb-4" 
                   name="action" id="validate-connec" style="margin-top: 1em">Connexion</button>
-                  <a class="btn btn-dark btn-lg btn-block" data-toggle="modal" role="button" data-target="#modal-insc">Inscription</a>
+                  <a class="btn btn-dark btn-lg btn-block" data-toggle="modal" role="button" data-target="#modal-insc" id="inscription">Inscription</a>
               </div>  
               </form>
             </div>

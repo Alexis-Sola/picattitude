@@ -98,8 +98,15 @@ class DbUsers
     }
 
     public function delete_user($pseudo){
-        $query = $this->db->prepare("DELETE FROM alive_user WHERE pseudo = :pseudo AND user_rank != \"admin\"");
+
+        $query = $this->db->prepare("DELETE FROM picture WHERE pseudo = :pseudo");
         $query->execute(array(
+                ':pseudo' => $pseudo
+            )
+        );
+
+        $query1 = $this->db->prepare("DELETE FROM alive_user WHERE pseudo = :pseudo AND user_rank != \"admin\"");
+        $query1->execute(array(
                 ':pseudo' => $pseudo
             )
         );

@@ -69,7 +69,8 @@ class SharedPics extends Structure implements Display
                     $row['pic_name'],
                     $row['pseudo'],
                     $row['user_rank'],
-                    $color
+                    $color,
+                    $row['id_picture']
                 );
             }
             $this->viewSharedPics->close_tab();

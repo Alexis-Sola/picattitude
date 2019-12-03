@@ -13,6 +13,9 @@ $(document).ready(function() {
             if(result === true){
                 location.reload();
             }
+            else{
+                alert("Un problème est survenu.")
+            }
         });
     });
 });

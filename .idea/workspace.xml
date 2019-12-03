@@ -3,8 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="e96d6310-7baa-4b8b-9a0b-2c8c9964ba4f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JS/utils/inscription.php" beforeDir="false" afterPath="$PROJECT_DIR$/JS/utils/inscription.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JS/validate_inscription.js" beforeDir="false" afterPath="$PROJECT_DIR$/JS/validate_inscription.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CONTROLLER/SharedPics.php" beforeDir="false" afterPath="$PROJECT_DIR$/CONTROLLER/SharedPics.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JS/supprimerPhoto.js" beforeDir="false" afterPath="$PROJECT_DIR$/JS/supprimerPhoto.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JS/utils/supprimerPhoto.php" beforeDir="false" afterPath="$PROJECT_DIR$/JS/utils/supprimerPhoto.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JS/validate_connexion.js" beforeDir="false" afterPath="$PROJECT_DIR$/JS/validate_connexion.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MODEL/DbUsers.php" beforeDir="false" afterPath="$PROJECT_DIR$/MODEL/DbUsers.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VIEW/ViewModalConnec.php" beforeDir="false" afterPath="$PROJECT_DIR$/VIEW/ViewModalConnec.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VIEW/ViewSharedPics.php" beforeDir="false" afterPath="$PROJECT_DIR$/VIEW/ViewSharedPics.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -111,7 +116,7 @@
       <workItem from="1573226474598" duration="31016000" />
       <workItem from="1573828526148" duration="8353000" />
       <workItem from="1574861137446" duration="57525000" />
-      <workItem from="1575381402994" duration="14894000" />
+      <workItem from="1575381402994" duration="17969000" />
     </task>
     <servers />
   </component>
