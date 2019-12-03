@@ -15,25 +15,25 @@ header('Expires: Mon, 26 Jul 1997 05:00:00 GMT');
 header('Content-type: application/json');
 
 $result = -1;
+$pseudo = filter_input(INPUT_POST, 'pseudo');
+$password = filter_input(INPUT_POST, 'password');
 
-if (isset($_POST['pseudo']) && isset($_POST['password'])){
+if (isset($pseudo) && isset($password)){
 
     $connection = new DbConnection();
     $db = $connection->connection();
     $query = new DbUsers($db);
 
-    $username = $_POST['pseudo'];
-    $pass = $_POST['password'];
 
-    $resultquery = $query->loginUsers($username);
+    $resultquery = $query->loginUsers($pseudo);
 
-    if(empty($username) || empty($pass)){
+    if(empty($pseudo) || empty($password)){
         $result = 0;
     }
     else{
-        if(password_verify($pass, $resultquery['password'])){
+        if(password_verify($password, $resultquery['password'])){
 
-            $_SESSION['pseudo'] = $username;
+            $_SESSION['pseudo'] = $pseudo;
             $_SESSION['id_user'] = $resultquery['id_user'];
             $_SESSION['rank'] = $resultquery['user_rank'];
             $_SESSION['ipaddr'] = $resultquery['ip_addr'];

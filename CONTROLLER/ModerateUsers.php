@@ -83,7 +83,7 @@ class ModerateUsers extends Structure implements Display
                 $this->getStartEnd()->formaction_deconnection_navbar();
                 $this->getStartEnd()->footer_file();
 
-            } 
+            }
         }
 
     }
