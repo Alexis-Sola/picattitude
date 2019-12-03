@@ -48,7 +48,7 @@ $(document).ready(function () {
         }).done(function (data) {
             $("#cardshow").empty();
             for (let i = 0; i < data.length; i++) {
-                card_image(data[i]['titre'], data[i]['desc'], data[i]['users'], data[i]['date'], data[i]['name'])
+                card_image(data[i]['title'], data[i]['description'], data[i]['pseudo'], data[i]['upload_date'], data[i]['pic_name'])
             }
         });
     });

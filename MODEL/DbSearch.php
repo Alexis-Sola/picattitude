@@ -43,13 +43,27 @@ class DbSearch
 
         $keywords = $this->extract_words($string);
 
-        $sql = 'SELECT * FROM image WHERE';
+        $sql = 'SELECT * FROM picture WHERE';
+        $cpt = 0;
         foreach($keywords as $word){
-            $sql.= ' users LIKE \'' . $word . '\' OR titre LIKE \''. $word .'\' OR `desc` LIKE \''. $word .'\' OR ';
+            $cpt++;
+            $sql.= ' pseudo LIKE :word' . $cpt . ' OR title LIKE :word'. $cpt .' OR `description` LIKE :word'. $cpt .' OR ';
 
         }
-        $sql .= '1 = 0 ORDER BY ID DESC;';
-        $result = $this->db->query($sql)->fetchAll();
+        $sql .= '1 = 0 ORDER BY id_picture DESC;';
+        $query = $this->db->prepare($sql);
+
+        $tab_asso = array();
+        $cpt = 0;
+        foreach($keywords as $word) {
+            $cpt++;
+            $tab_asso[':word'. $cpt . ''] =  $word;
+        }
+
+        $query->execute($tab_asso);
+        $result = $query->fetchAll();
+
+        //$result = $this->db->query($sql)->fetchAll();
         return $result;
     }
 

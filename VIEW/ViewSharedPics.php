@@ -11,36 +11,47 @@ class ViewSharedPics
 
     public function head_table(){
         echo'
-        <table class="table align-self-center table-hover" style="width: 75%; margin-top: 2em; margin-left: 13%"> 
-          <thead class="black white-text">
+        <table class="table table-hover m-auto"  style="width: 80%;"> 
+          <thead class="black white-text text-center">
             <tr>
-              <th scope="col">N° de l\'image</th>
-              <th scope="col">Image</th>
-              <th scope="col">Cocher</th>
-              <th scope="col">Supprimer</th>
+              <th scope="col">
+              <h3 style="color: white">
+                #
+              </h3>
+               </th>
+              <th scope="col">
+              <h3 style="color: white">
+                Image
+              </h3>
+              </th>
+              <th scope="col">
+              <h3 style="color: white">
+                Suppression
+              </h3>
+            </th>
             </tr>
           </thead>
-          <tbody class="body-table align-content-center">';
+          <tbody class="body-table text-center">';
     }
 
-    public function table_user_account($user, $name){
+    public function table_user_account($cpt, $name, $pseudo, $rank, $color){
         echo '
     <tr>
-      <th scope="row">'. $user .'</th>
+      <th scope="row">'. $cpt .'</th>
       <td>
-       <div class="view">
-        <img width="50em" height="50em" class="img-fluid test" src="/image/' . $name . '" alt="Card image cap">
+       <div class="view" style="margin-left: 15em">
+        <img width="80em" height="80em" class="img-fluid test" src="/image/' . $name . '" alt="Card image cap">
          <a href="/image/' . $name . '">
               <div class="mask rgba-white-slight"></div>
          </a>
         </div>
       </td>
-      <td><input type="checkbox" class="custom-control-input " id="tableDefaultCheck1">
-          <label class="custom-control-label" for="tableDefaultCheck1">Supprimer</label></td>
       <td>
-      <form method="post" action="/JS/utils/supprimerPhoto.php" id="form-rm-pic">  
+      <form method="post" action="/JS/utils/supprimerPhoto.php" class="form-rm-pic">  
         <input type="hidden" value="'.$user.'" name="id-user"/>
-        <button type="submit" class="btn btn-indigo">Supprimer</button>
+        <button type="submit" class="btn btn-elegant btn-block btn-lg">
+            Supprimer l\'image de [<span  class="'. $color .'-text"><b>'. $rank .'</b></span>]<b> '.$pseudo.'</b>
+         </button>
       </form>
       </td> 
     </tr>

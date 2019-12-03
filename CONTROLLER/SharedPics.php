@@ -26,38 +26,57 @@ class SharedPics extends Structure implements Display
 
     public function Display($data = [])
     {
+        $rank_user_connected = $_SESSION['rank'];
+
         if($this->getConnected() === true) {
 
-
             $this->getStartEnd()->head_file('pic_attitude(share)', 'supprimerPhoto');
-            $this->getNavbar()->nav_bar($this->getConnected());
+            $this->getNavbar()->nav_bar($this->getConnected(),$this->getColorRank(), $rank_user_connected);
             $this->getModalAddPic()->modal_add_pic();
             $this->viewSharedPics->head_table();
 
-            if ($_SESSION['rank'] === "admin" || $_SESSION['rank'] === "modo") {
+            if ($_SESSION['rank'] === "admin") {
 
-                $result = $this->getDbImages()->getAllImages();
+                $result = $this->getDbImages()->get_image_user_modo_admin($_SESSION['pseudo']);
 
-            } else {
-                $result = $this->getDbImages()->getImageUser($_SESSION['pseudo']);
             }
+            elseif ($_SESSION['rank'] === "modo"){
+                $result = $this->getDbImages()->get_image_user_modo($_SESSION['pseudo']);
+            }
+
+            else {
+                $result = $this->getDbImages()->get_image_with_pseudo($_SESSION['pseudo']);
+            }
+
+            $cpt = 1;
 
             foreach ($result as $row) {
 
-                $this->viewSharedPics->table_user_account($row['id_picture'], $row['pic_name']);
+                if($row['user_rank'] === "admin"){
+                    $color = "red";
+                }
+                elseif($row['user_rank'] === "modo"){
+                    $color = "green";
+                }
+                else{
+                    $color = "blue";
+                }
+
+                $this->viewSharedPics->table_user_account(
+
+                    $cpt++,
+                    $row['pic_name'],
+                    $row['pseudo'],
+                    $row['user_rank'],
+                    $color
+                );
             }
             $this->viewSharedPics->close_tab();
 
             $this->getStartEnd()->formaction_deconnection_navbar();
             $this->getStartEnd()->footer_file();
         }
-        else{
 
-            $this->getStartEnd()->head_file('pic_attitude(share)', 'supprimerPhoto');
-            $this->getNavbar()->nav_bar($this->getConnected());
-            $this->getModalConnec()->modal_connexion();
-            $this->getStartEnd()->footer_file();
-        }
     }
 
 }

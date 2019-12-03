@@ -17,8 +17,19 @@ $dbSearch = new DbSearch($db);
 $dbUser = new DbUsers($db);
 $cards = new ViewCard();
 
-$string = $_POST['search-str'];
-$result = $dbSearch->search_by_keyword($string);
+$string = filter_input(INPUT_POST, 'search-str');
+$action = filter_input(INPUT_POST, 'validate-search');
+
+if(isset($string)){
+
+    $result = $dbSearch->search_by_keyword($string);
+}
+else{
+
+    $result = false;
+}
+
+
 
 echo json_encode($result);
 

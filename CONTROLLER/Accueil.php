@@ -28,9 +28,10 @@ class Accueil extends Structure implements Display
     public function Display($data = [])
     {
 
+        $rank_user_connected = $_SESSION['rank'];
 
         $this->getStartEnd()->head_file('pic_attitude(share)');
-        $this->getNavbar()->nav_bar($this->getConnected());
+        $this->getNavbar()->nav_bar($this->getConnected(), $this->getColorRank(), $rank_user_connected);
         $this->getModalConnec()->modal_connexion();
         $this->getModalConnec()->modal_insc();
         $this->getModalAddPic()->modal_add_pic();

@@ -5,42 +5,36 @@ class ViewUsers
 {
     public function head_table(){
         echo'
-        <table class="table align-self-center table-hover" style="width: 75%; margin-top: 2em; margin-left: 13%"> 
-          <thead class="black white-text">
+        <table class="table table-hover m-auto" style="width: 80%; margin-top: 3em;"> 
+          <thead class="black white-text text-center">
             <tr>
-              <th scope="col">Nom utilisateur</th>
+              <th scope="col">#</th> 
+              <th scope="col">Supprimer</th> 
+              <th scope="col">Bannir</th> 
               <th scope="col">Adresse IP</th>
-              <th scope="col">Actions</th>
-              <th scope="col">Supprimer/Bannir</th>
             </tr>
           </thead>
-          <tbody class="body-table align-content-center">';
+          <tbody class="body-table">';
     }
 
-    public function table_user_account($pseudo, $ipaddr){
+    public function table_user_account($pseudo, $ipaddr, $cpt, $rank, $color){
         echo '
     <tr>
-      <th scope="row">'. $pseudo .'</th>
-      <th scope="row">'. $ipaddr .'</th>
+      <td>'. $cpt .'</td>
       <td>
-          <input type="checkbox" class="custom-control-input">
-          <label class="custom-control-label" for="tableDefaultCheck1"></label>
-      </td>
-      <td>
-          <div class="btn-group dropright">
-            <button type="button" class="btn btn-primary">Choisir une action</button>
-            <button type="button" class="btn btn-primary dropdown-toggle px-3" data-toggle="dropdown" aria-haspopup="true"
-                aria-expanded="false">
-            <span class="sr-only">Toggle Dropdown</span>
-            </button>
-              <div class="dropdown-menu">
-                <a class="dropdown-item">Supprimer</a>
-                <a class="dropdown-item">Bannir</a>
-              </div>
-           </div>
-        <input type="hidden" value="'.$pseudo.'" name="pseudo-suppr"/>
-        <button type="submit" class="btn btn-indigo">Supprimer</button>
-      </td> 
+        <form method="post" action="/JS/utils/delete_account.php" class="form-rm-account">                     
+             <input type="hidden" value="'. $pseudo . '" name="pseudo-suppr"/>
+             <button type="submit" class="btn btn-lg btn-block">Supprimer le compte 
+                [<span  class="'. $color .'-text"><b>'. $rank .'</b></span>]<b> '.$pseudo.'</b>
+             </button>
+        </form>
+        
+        <td>
+            <button class="btn btn-danger btn-lg btn-block">Bannir 
+                [<span class="'. $color .'-text"><b>'. $rank .'</b></span>]<b> '.$pseudo.'</b>
+            </button>  
+       </td>         
+      <td><a class="btn btn-warning btn-lg btn-block">'. $ipaddr .'</a></td> 
     </tr>
     
 ';

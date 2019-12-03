@@ -44,8 +44,46 @@ class DbImages
         return $result;
     }
 
-    public function getImageUser($pseudo){
-        $query = $this->db->prepare('SELECT * FROM picture WHERE pseudo = :pseudo ORDER BY id_picture DESC');
+    public function get_image_user_modo_admin($pseudo){
+
+        $query = $this->db->prepare(
+            "SELECT * FROM picture
+             INNER JOIN alive_user ON picture.id_user = alive_user.id_user
+             WHERE picture.pseudo = :pseudo OR user_rank = \"user\" OR user_rank = \"modo\"
+             ORDER BY id_picture DESC"
+        );
+        $query->execute(array(
+                ':pseudo' => $pseudo
+            )
+        );
+        $result = $query->fetchAll();
+        return $result;
+    }
+
+    public function get_image_user_modo($pseudo){
+
+        $query = $this->db->prepare(
+            "SELECT * FROM picture
+             INNER JOIN alive_user ON picture.id_user = alive_user.id_user
+             WHERE picture.pseudo = :pseudo OR user_rank = \"user\"
+             ORDER BY id_picture DESC"
+        );
+        $query->execute(array(
+                ':pseudo' => $pseudo
+            )
+        );
+        $result = $query->fetchAll();
+        return $result;
+    }
+
+    public function get_image_with_pseudo($pseudo){
+        $query = $this->db->prepare(
+            "SELECT * FROM picture 
+             INNER JOIN alive_user ON picture.id_user = alive_user.id_user
+             WHERE picture.pseudo = :pseudo 
+             ORDER BY id_picture DESC"
+        );
+
         $query->execute(array(
                 ':pseudo' => $pseudo
             )

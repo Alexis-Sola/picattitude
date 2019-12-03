@@ -10,7 +10,7 @@ $(document).ready(function() {
             data: $(this).serialize(),
         }).done(function(result) {
             if(result === true){
-                location.reload();
+                document.location.href = "Accueil";
             }
         });
         return false;

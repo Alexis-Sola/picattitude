@@ -23,17 +23,17 @@ class ViewCard
                   <?php
                   if ($rank === "admin") {
                       ?>
-                      <p class="card-text">Posté par [<span  class="red-text"><b><?php echo $rank ?></b></span>] <span class="indigo-text"><b><?php echo $login ?></b></span> le <?php echo $date ?></p>
+                      <p class="card-text">Posté par [<span  class="red-text"><b><?php echo strtoupper($rank) ?></b></span>] <span class="indigo-text"><b><?php echo strtoupper($login) ?></b></span> le <?php echo $date ?></p>
                       <?php
                   }
                   else if ($rank === "modo"){
                       ?>
-                  <p class="card-text">Posté par [<span  class="pink-text"><b><?php echo $rank ?></b></span>] <span class="indigo-text"><b><?php echo $login ?></b></span> le <?php echo $date ?></p>
+                  <p class="card-text">Posté par [<span  class="green-text"><b><?php echo strtoupper($rank) ?></b></span>] <span class="indigo-text"><b><?php echo strtoupper($login) ?></b></span> le <?php echo $date ?></p>
                   <?php
                   }
                   else{
                       ?>
-                      <p class="card-text">Posté par [<span  class="indigo-text"><b><?php echo $rank ?></b></span>] <span class="indigo-text"><b><?php echo $login ?></b></span> le <?php echo $date ?></p>
+                      <p class="card-text">Posté par [<span  class="indigo-text"><b><?php echo strtoupper($rank) ?></b></span>] <span class="indigo-text"><b><?php echo strtoupper($login) ?></b></span> le <?php echo $date ?></p>
                       <?php
                   }
                   ?>

@@ -34,7 +34,8 @@ class DbUsers
         $query = $this->db->prepare('SELECT * FROM alive_user');
 
         $query->execute();
-        $result = $query->fetch();
+
+        $result = $query->fetchAll();
 
         return $result;
     }
@@ -93,6 +94,35 @@ class DbUsers
         ));
 
         $result = $query->fetch();
+        return $result;
+    }
+
+    public function delete_user($pseudo){
+        $query = $this->db->prepare("DELETE FROM alive_user WHERE pseudo = :pseudo AND user_rank != \"admin\"");
+        $query->execute(array(
+                ':pseudo' => $pseudo
+            )
+        );
+
+    }
+
+    public function get_user_modo(){
+
+        $query = $this->db->prepare("SELECT * FROM alive_user WHERE user_rank != \"admin\"");
+        $query->execute();
+
+        $result = $query->fetchAll();
+
+        return $result;
+    }
+
+    public function get_user(){
+
+        $query = $this->db->prepare("SELECT * FROM alive_user WHERE user_rank != \"admin\" AND user_rank != \"modo\"");
+        $query->execute();
+
+        $result = $query->fetchAll();
+
         return $result;
     }
 

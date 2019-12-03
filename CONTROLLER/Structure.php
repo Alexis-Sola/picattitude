@@ -21,6 +21,7 @@ class Structure
     private $navbar;
     private $modal_connec;
     private $connected;
+    private $color_rank;
 
     public function __construct()
     {
@@ -29,6 +30,16 @@ class Structure
         }
         else{
             $this->connected = false;
+        }
+
+        if($_SESSION['rank'] === "admin"){
+            $this->color_rank = "red";
+        }
+        elseif($_SESSION['rank'] === "modo"){
+            $this->color_rank = "green";
+        }
+        else{
+            $this->color_rank = "blue";
         }
 
         $this->startEnd = new StartEnd();
@@ -90,6 +101,11 @@ class Structure
     protected function getConnected()
     {
         return $this->connected;
+    }
+
+    protected function getColorRank()
+    {
+        return $this->color_rank;
     }
 
 }

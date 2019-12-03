@@ -2,8 +2,30 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e96d6310-7baa-4b8b-9a0b-2c8c9964ba4f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/CONTROLLER/ModerateUsers.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JS/delete_account.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JS/utils/delete_account.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CONTROLLER/Accueil.php" beforeDir="false" afterPath="$PROJECT_DIR$/CONTROLLER/Accueil.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CONTROLLER/Inscription.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CONTROLLER/ModerateUsers.php" beforeDir="false" afterPath="$PROJECT_DIR$/CONTROLLER/ModerateUsers.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CONTROLLER/SharedPics.php" beforeDir="false" afterPath="$PROJECT_DIR$/CONTROLLER/SharedPics.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CONTROLLER/Structure.php" beforeDir="false" afterPath="$PROJECT_DIR$/CONTROLLER/Structure.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JS/deconnexion.js" beforeDir="false" afterPath="$PROJECT_DIR$/JS/deconnexion.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JS/supprimerPhoto.js" beforeDir="false" afterPath="$PROJECT_DIR$/JS/supprimerPhoto.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JS/utils/add_pic.php" beforeDir="false" afterPath="$PROJECT_DIR$/JS/utils/add_pic.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JS/utils/affichageCardMonCompte.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/JS/utils/is_connected.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/JS/utils/search_by_keyword.php" beforeDir="false" afterPath="$PROJECT_DIR$/JS/utils/search_by_keyword.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JS/validate_search.js" beforeDir="false" afterPath="$PROJECT_DIR$/JS/validate_search.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MODEL/DbImages.php" beforeDir="false" afterPath="$PROJECT_DIR$/MODEL/DbImages.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MODEL/DbSearch.php" beforeDir="false" afterPath="$PROJECT_DIR$/MODEL/DbSearch.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MODEL/DbUsers.php" beforeDir="false" afterPath="$PROJECT_DIR$/MODEL/DbUsers.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VIEW/StartEnd.php" beforeDir="false" afterPath="$PROJECT_DIR$/VIEW/StartEnd.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VIEW/ViewCard.php" beforeDir="false" afterPath="$PROJECT_DIR$/VIEW/ViewCard.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VIEW/ViewNavigationBar.php" beforeDir="false" afterPath="$PROJECT_DIR$/VIEW/ViewNavigationBar.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VIEW/ViewSharedPics.php" beforeDir="false" afterPath="$PROJECT_DIR$/VIEW/ViewSharedPics.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VIEW/ViewUsers.php" beforeDir="false" afterPath="$PROJECT_DIR$/VIEW/ViewUsers.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -109,7 +131,8 @@
       <workItem from="1573030222425" duration="50256000" />
       <workItem from="1573226474598" duration="31016000" />
       <workItem from="1573828526148" duration="8353000" />
-      <workItem from="1574861137446" duration="41014000" />
+      <workItem from="1574861137446" duration="57525000" />
+      <workItem from="1575381402994" duration="10934000" />
     </task>
     <servers />
   </component>

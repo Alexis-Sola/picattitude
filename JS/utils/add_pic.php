@@ -32,14 +32,14 @@ $titre = $_POST['titre'];
 $extension = pathinfo($actualName, PATHINFO_EXTENSION);
 
 
-if (strlen($titre) > 25) {
+if (strlen($titre) > 40) {
     $error = true;
-    $result = "Titre trop long ! 25 caractères max !";
+    $result = "Titre trop long ! 40 caractères max !";
 }
 
-if (strlen($descrip) > 100) {
+if (strlen($descrip) > 150) {
     $error = true;
-    $result = "Description trop longue ! 100 caractère max !";
+    $result = "Description trop longue ! 150 caractère max !";
 }
 
 if (empty($actualName) || $actualSize === 0) {

@@ -39,7 +39,7 @@ class StartEnd
         <?php
             if ($script != NULL) {
                 ?>
-                <script src="../JS/<?php echo $script; ?>.js"></script>
+                <script src="/JS/<?php echo $script; ?>.js"></script>
                 <?php
             }
             ?>
