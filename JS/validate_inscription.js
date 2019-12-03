@@ -25,9 +25,10 @@ $(document).ready(function() {
                     $("#retour-insc").html("<p style='color: red'><strong>Pseudo déjà utilisé...</strong></p>");
                     $("#validate-insc").show();
                     break;
-                //case 3:
-                    //$("#erreurinsc").html("<p style='color: red'><strong>Mot de passe trop court...</strong></p>");
-                    //break;
+                case 3:
+                    $("#retour-insc").html("<p style='color: red'><strong>Mot de passe trop court...</strong></p>");
+                    $("#validate-insc").show();
+                    break;
                 case 4:
                     $("#retour-insc").html("<p style='color: red'><strong>Les mots de passes ne correspondent pas...</strong></p>");
                     $("#validate-insc").show();

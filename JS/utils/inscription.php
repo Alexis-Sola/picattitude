@@ -24,26 +24,25 @@ if (!empty($_SERVER['HTTP_CLIENT_IP'])) {
 }
 
 $result = -1;
+$pseudo = filter_input(INPUT_POST, 'login');
+$pass1 = filter_input(INPUT_POST, 'pass1');
+$pass2 = filter_input(INPUT_POST, 'pass2');
+$mail = filter_input(INPUT_POST, 'mail');
 
-
-if (isset($_POST['login']) && isset($_POST['pass1']) && isset($_POST['pass2']) && isset($_POST['mail'])){
+if (isset($pseudo) && isset($pass1) && isset($pass2) && isset($mail)){
 
     $connection = new DbConnection();
     $db = $connection->connection();
     $query = new DbUsers($db);
 
-    $login = $_POST['login'];
-    $pass1 = $_POST['pass1'];
-    $pass2 = $_POST['pass2'];
-    $mail = $_POST['mail'];
 
-    $nbRow = $query->sameLogin($login);
-    if(empty($login) || empty($pass1) || empty($pass2) || empty($mail)){
+    $nbRow = $query->sameLogin($pseudo);
+    if(empty($pseudo) || empty($pass1) || empty($pass2) || empty($mail)){
         $result = 0;
     }
     else{
 
-        if(strlen($pass1) < 0){
+        if(strlen($pass1) < 8){
             $result = 3;
         }
 
@@ -57,7 +56,7 @@ if (isset($_POST['login']) && isset($_POST['pass1']) && isset($_POST['pass2']) &
         else{
             $result = 1;
             $_SESSION['rank'] = 'user';
-            $query->insertUsers("user", $ip, password_hash($pass1,  PASSWORD_DEFAULT), $login, $mail);
+            $query->insertUsers("user", $ip, password_hash($pass1,  PASSWORD_DEFAULT), $pseudo, $mail);
         }
 
     }
