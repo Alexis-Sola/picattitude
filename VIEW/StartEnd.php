@@ -30,8 +30,8 @@ class StartEnd
             <script type="text/javascript" src="/css/js/mdb.min.js"></script>
             <link href="/style.css" rel="stylesheet">
             <script src="../JS/jquery-3.3.1.min.js"></script>
-            <script src="../JS/validateConnexion.js"></script>
-            <script src="../JS/validateInscription.js"></script>
+            <script src="../JS/validate_connexion.js"></script>
+            <script src="../JS/validate_inscription.js"></script>
             <script src="../JS/deconnexion.js"></script>
             <script src="../JS/validate_search.js"></script>
             <script src="/JS/validate_addpic.js"></script>
