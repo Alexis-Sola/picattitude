@@ -48,8 +48,9 @@ class SharedPics extends Structure implements Display
                 $result = $this->getDbImages()->get_image_with_pseudo($_SESSION['pseudo']);
             }
 
-            $cpt = 1;
+            $this->getCards()->open_carddeck();
 
+            $cpt = 1;
             foreach ($result as $row) {
 
                 if($row['user_rank'] === "admin"){
@@ -72,6 +73,8 @@ class SharedPics extends Structure implements Display
                 );
             }
             $this->viewSharedPics->close_tab();
+
+            $this->getCards()->close_carddeck();
 
             $this->getStartEnd()->formaction_deconnection_navbar();
             $this->getStartEnd()->footer_file();

@@ -8,21 +8,15 @@
 
 session_start();
 
-include_once 'VIEW/ViewCard.php';
 include_once  'CONTROLLER/Structure.php';
 
 class Accueil extends Structure implements Display
 {
-    private $cards;
 
-    /**
-     * Accueil constructor.
-     */
 
     public function __construct()
     {
         parent::__construct();
-        $this->cards = new ViewCard();
     }
 
     public function Display($data = [])
@@ -38,14 +32,14 @@ class Accueil extends Structure implements Display
         $this->getStartEnd()->formaction_deconnection_navbar();
 
         $result =  $this->getDbImages()->getAllImages();
-        $this->cards->first_card($this->getConnected());
-        $this->cards->open_carddeck();
+        $this->getCards()->first_card($this->getConnected());
+        $this->getCards()->open_carddeck();
 
         foreach ($result as $row) {
 
             $user = $this->getDbUser()->selectUserWithLogin($row['pseudo']);
 
-            $this->cards->card_image(
+            $this->getCards()->card_image(
 
                 $row['title'],
                 $row['description'],
@@ -58,7 +52,7 @@ class Accueil extends Structure implements Display
 
         }
 
-        $this->cards->close_carddeck();
+        $this->getCards()->close_carddeck();
         $this->getStartEnd()->footer_file();
     }
 

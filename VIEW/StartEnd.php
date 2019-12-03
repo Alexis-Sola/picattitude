@@ -51,10 +51,6 @@ class StartEnd
         </head>
         <body>
         <div id="bg-image"></div>
-        <form method="post" action="../JS/utils/login.php" id="formconnec">
-        </form>
-        <form method="post" action="../JS/utils/inscription.php" id="forminsc">
-        </form>
         <div id="global">
         <?php
     }
@@ -114,7 +110,9 @@ class StartEnd
             <!-- Copyright -->
 
         </footer>
-        <!-- Footer -->
+        </body>
+
+    <!-- Footer -->
         <?php
     }
 

@@ -7,7 +7,7 @@ include_once 'MODEL/DbUsers.php';
 include_once 'MODEL/DbConnection.php';
 include_once 'VIEW/ViewAddPic.php';
 include_once 'VIEW/ViewModalConnec.php';
-
+include_once 'VIEW/ViewCard.php';
 
 session_start();
 
@@ -22,6 +22,7 @@ class Structure
     private $modal_connec;
     private $connected;
     private $color_rank;
+    private $cards;
 
     public function __construct()
     {
@@ -50,6 +51,8 @@ class Structure
         $this->navbar = new ViewNavigationBar();
         $this->modal_add_pic = new ViewAddPic();
         $this->modal_connec = new ViewModalConnec();
+        $this->cards = new ViewCard();
+
     }
 
     /**
@@ -108,4 +111,8 @@ class Structure
         return $this->color_rank;
     }
 
+    protected function getCards()
+    {
+        return $this->cards;
+    }
 }

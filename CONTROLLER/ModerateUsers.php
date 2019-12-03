@@ -34,8 +34,9 @@ class ModerateUsers extends Structure implements Display
                 $this->viewUsers->head_table();
 
                 $result = $this->getDbUser()->get_user_modo();
-                $cpt = 1;
+                $this->getCards()->open_carddeck();
 
+                $cpt = 1;
                 foreach ($result as $row) {
 
                     if($row['user_rank'] === "modo"){
@@ -50,15 +51,10 @@ class ModerateUsers extends Structure implements Display
                 }
                 $this->viewUsers->close_tab();
 
+                $this->getCards()->close_carddeck();
                 $this->getStartEnd()->formaction_deconnection_navbar();
                 $this->getStartEnd()->footer_file();
 
-            } else {
-
-                $this->getStartEnd()->head_file('pic_attitude(share)');
-                $this->getNavbar()->nav_bar($this->getConnected());
-                $this->getModalConnec()->modal_connexion();
-                $this->getStartEnd()->footer_file();
             }
         }
         elseif ($_SESSION['rank'] === 'modo'){
@@ -73,8 +69,9 @@ class ModerateUsers extends Structure implements Display
                 $this->viewUsers->head_table();
 
                 $result = $this->getDbUser()->get_user();
-                $cpt = 1;
+                $this->getCards()->open_carddeck();
 
+                $cpt = 1;
                 foreach ($result as $row) {
 
                     $this->viewUsers->table_user_account($row['pseudo'], $row['ip_addr'],$cpt++, $row['user_rank'], "blue");
@@ -82,16 +79,11 @@ class ModerateUsers extends Structure implements Display
 
                 $this->viewUsers->close_tab();
 
+                $this->getCards()->close_carddeck();
                 $this->getStartEnd()->formaction_deconnection_navbar();
                 $this->getStartEnd()->footer_file();
 
-            } else {
-
-                $this->getStartEnd()->head_file('pic_attitude(share)');
-                $this->getNavbar()->nav_bar($this->getConnected());
-                $this->getModalConnec()->modal_connexion();
-                $this->getStartEnd()->footer_file();
-            }
+            } 
         }
 
     }
