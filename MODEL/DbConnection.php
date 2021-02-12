@@ -24,10 +24,10 @@ class DbConnection
 
     public function __construct()
     {
-        $this->host = 'localhost';
-        $this->dbName = 'id11344999_picattitude';
-        $this->username = 'id11344999_alexissola';
-        $this->pass = 'azerty';
+        $this->host = '';
+        $this->dbName = '';
+        $this->username = '';
+        $this->pass = '';
     }
 
     public function connection(){
